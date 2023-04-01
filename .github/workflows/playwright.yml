@@ -8,20 +8,24 @@ jobs:
   test:
     timeout-minutes: 60
     runs-on: ubuntu-latest
+    container:
+      image: mcr.microsoft.com/playwright:v1.17.1-focal
+      options: --shm-size=2gb
     steps:
-    - uses: actions/checkout@v3
-    - uses: actions/setup-node@v3
+    - uses: actions/checkout@v2
+    - name: Cache Playwright dependencies
+      uses: actions/cache@v2
       with:
-        node-version: 16
-    - name: Install dependencies
+        path: node_modules
+        key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+        restore-keys: |
+          ${{ runner.os }}-node-
+    - name: Install Playwright dependencies
       run: npm ci
-    - name: Install Playwright Browsers
-      run: npx playwright install --with-deps
     - name: Run Playwright tests
-      run: npx playwright test --headless
-    - uses: actions/upload-artifact@v3
-      if: always()
+      run: npx playwright test
+    - name: Deploy Playwright report
+      uses: peaceiris/actions-gh-pages@v3
       with:
-        name: playwright-report
-        path: playwright-report/
-        retention-days: 30
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./playwright-report

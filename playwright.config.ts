@@ -11,13 +11,13 @@ import { defineConfig, devices } from '@playwright/test';
  */
 export default defineConfig({
   globalSetup: "./global.setup",
-  testDir: './tests',
+  testDir: './tests',  
   /* Run tests in files in parallel */
   fullyParallel: true,
   /* Fail the build on CI if you accidentally left test.only in the source code. */
   forbidOnly: !!process.env.CI,
   /* Retry on CI only */
-  retries: process.env.CI ? 3 : undefined,
+  retries: process.env.CI ? 1 : 1,
   /* Opt out of parallel tests on CI. */
   workers: process.env.CI ? 3 : undefined,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
@@ -33,6 +33,7 @@ export default defineConfig({
     storageState: "./loginAuth.json",
     screenshot: 'only-on-failure',
     video: 'retain-on-failure',
+    viewport: { width: 1920, height: 1080 }
   },
 
   /* Configure projects for major browsers */

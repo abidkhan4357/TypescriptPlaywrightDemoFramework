@@ -1,0 +1,19 @@
+{
+  "products": [
+    {
+      "name": "Men Tshirt",
+      "quantity": 2
+    },
+    {
+      "name": "Blue Top",
+      "quantity": 1
+    }
+  ],
+  "paymentInfo": {
+    "nameOnCard": "John Smith",
+    "cardNumber": "4224858394583333",
+    "cvc": "345",
+    "expMonth": "10",
+    "expYear": "2028"
+  }
+}

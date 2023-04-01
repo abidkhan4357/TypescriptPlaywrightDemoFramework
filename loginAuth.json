@@ -1,0 +1,73 @@
+{
+  "cookies": [
+    {
+      "name": "csrftoken",
+      "value": "7Tnq2JujwikaHUbelSZQSq4XlKUU7dF7Nbn0dRga6MugIuHqTBTpTXtf72tWFWtP",
+      "domain": "automationexercise.com",
+      "path": "/",
+      "expires": 1711777472.319249,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "__gads",
+      "value": "ID=33f1faef97a59ee9-22d4a892f0de0040:T=1680327867:RT=1680327867:S=ALNI_MYQVaQOGVCkxrdlHSXdQ2r0wtwRRg",
+      "domain": ".automationexercise.com",
+      "path": "/",
+      "expires": 1714023867,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "__gpi",
+      "value": "UID=00000a3af1f0ff86:T=1680327867:RT=1680327867:S=ALNI_MbOQhAGCfRUB-gl38RXyILBrUTaug",
+      "domain": ".automationexercise.com",
+      "path": "/",
+      "expires": 1714023867,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "IDE",
+      "value": "AHWqTUn-_KiBLvjt8UHhCgZyTZgGq7vWkEIlpaGtmbbTaJi9hyWaRn2nSvH8G3SXIqA",
+      "domain": ".doubleclick.net",
+      "path": "/",
+      "expires": 1714887871.652318,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "sessionid",
+      "value": "m97czwvezi3a1xc1nqb7b5nm2n0zvg16",
+      "domain": "automationexercise.com",
+      "path": "/",
+      "expires": 1681537471.99746,
+      "httpOnly": true,
+      "secure": false,
+      "sameSite": "Lax"
+    }
+  ],
+  "origins": [
+    {
+      "origin": "https://automationexercise.com",
+      "localStorage": [
+        {
+          "name": "google_experiment_mod44",
+          "value": "851"
+        },
+        {
+          "name": "google_ama_config",
+          "value": "[[[[null,0,null,[],null,null,\"BODY\"],2,[\"10px\",\"10px\",true],[4],null,[],[],1,[],[],[]],[[null,0,null,[],null,null,\"DIV.footer-widget\"],1,[\"10px\",\"10px\",true],[3],null,[],[],1,[],[],[]],[[null,0,null,[],null,null,\"DIV.footer-widget>DIV.container>DIV.row\"],4,[\"10px\",\"10px\",true],[3],null,[],[],1,[],[],[]],[[null,0,null,[],null,null,\"DIV.footer-bottom\"],2,[\"10px\",\"10px\",true],[5],null,[],[],1,[],[],[]],[[null,0,null,[],null,null,\"DIV.footer-bottom\"],3,[\"10px\",\"10px\",true],[5],null,[],[],1,[],[],[]],[[null,0,null,[],null,null,\"DIV.footer-bottom\"],4,[\"10px\",\"10px\",true],[5],null,[],[],1,[],[],[]],[[null,0,null,[],null,null,\"BODY\"],3,[\"10px\",\"10px\",true],[5],null,[],[],1,[],[],[]],[[null,0,null,[],null,null,\"BODY>FOOTER#footer\"],1,[\"10px\",\"10px\",true],[0],null,[],[],1,[],[2,4],[]],[[null,0,null,[],null,null,\"DIV#accordian\"],4,[\"10px\",\"35px\",false],[0],null,[],[],1,[],[],[]],[[null,0,null,[],null,null,\"BODY>SECTION>DIV.container>DIV.row>DIV\"],3,[\"10px\",\"10px\",false],[0],null,[],[],1,[],[],[]],[[null,1,null,[],null,null,\"BODY>SECTION>DIV.container\"],4,[\"10px\",\"10px\",true],[3],null,[],[],1,[],[],[]],[[null,1,null,[],null,null,\"BODY>SECTION>DIV.container>DIV.row\"],4,[\"10px\",\"10px\",true],[3],null,[],[],1,[],[],[]],[[null,0,null,[],null,null,\"SECTION#form\"],4,[\"10px\",\"185px\",true],[3],null,[],[],1,[],[],[]]],[],[1680414271523],\"20230328_103744\",[],[[]],[[null,[1,3,2],null,\"4334590153\",[],[],[0,2],true,null,[1],[]]],[null,[[1,\"1vp\",[[4,\"2vp\",\"2vp\"],[6,\"3vp\",\"3vp\"]],8,\"1vp\",0.30000001,[\"0.2vp\",\"0vp\",2]],[2,\"300px\",[[4,\"600px\",\"600px\"],[6,\"900px\",\"900px\"]],8,\"300px\",0.30000001,[\"60px\",\"0px\",2]]]],null,null,null,null,null,null,[null,null,null,null,null,null,null,null,null,null,null,false,null,null,false,null,null,null,null,null,null,null,null],null,null,null,null,[1912578087],null,null,[1680106639813]]"
+        },
+        {
+          "name": "google_adsense_settings",
+          "value": "{\"ca-pub-1677597403311019\":[\"ca-pub-1677597403311019\",[],[]]}"
+        }
+      ]
+    }
+  ]
+}

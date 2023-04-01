@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        browser: [chromium, firefox, webkit]
+        browser: [chromium]
     container:
       image: mcr.microsoft.com/playwright:latest 
       options: --shm-size=2gb

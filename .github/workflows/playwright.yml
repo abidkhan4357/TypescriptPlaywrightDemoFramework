@@ -53,8 +53,8 @@ jobs:
 
       - name: Build and tag Docker image
         run: |
-          docker build -t typescript-playwright-framework  .
-          docker tag typescript-playwright-framework  ${{ secrets.DOCKER_USERNAME }}/typescript-playwright-framework
+          docker build -t typescript-playwright-framework:latest .
+          docker tag typescript-playwright-framework:latest ${{ secrets.DOCKER_USERNAME }}/typescript-playwright-framework:latest
 
       - name: Push Docker image to Docker Hub
-        run: docker push ${{ secrets.DOCKER_USERNAME }}/typescript-playwright-framework
+        run: docker push ${{ secrets.DOCKER_USERNAME }}/typescript-playwright-framework:latest

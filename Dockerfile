@@ -1,5 +1,9 @@
 FROM mcr.microsoft.com/playwright:latest
 WORKDIR /tests
 COPY . /tests
-RUN npm ci && npx playwright install
+ENV SCREEN_WIDTH=1920 \
+    SCREEN_HEIGHT=1080 \
+    PLAYWRIGHT_BROWSERS_PATH=/usr/lib/playwright-browsers/
+RUN npm install && npx playwright install
 ENTRYPOINT [ "npm", "test" ]
+CMD ["--headed=false"]

@@ -6,4 +6,3 @@ ENV SCREEN_WIDTH=1920 \
     PLAYWRIGHT_BROWSERS_PATH=/usr/lib/playwright-browsers/
 RUN npm install && npx playwright install
 ENTRYPOINT [ "npm", "test" ]
-CMD ["--headed=false"]

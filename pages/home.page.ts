@@ -6,18 +6,29 @@ export class HomePage {
   private productsLabel = () => this.page.locator("css=a[href='/products']");
   private loggedInAsLabel = () => this.page.getByText("Logged in as");
   private continueShoppingButton = () => this.page.getByRole('button', { name: "Continue Shopping" })
-
+  private addedItemDialog = () => this.page.locator("css=.modal-content");
 
   constructor(page: Page) {
     this.page = page;
   }
 
-  public async clickOnProductsLabel() {
-    if (await this.continueShoppingButton().isVisible()) {
-      await this.continueShoppingButton().click();
+  public async clickOnProductsLabel(maxAttempts: number = 3) {
+    let attempts = 0;
+    while (attempts < maxAttempts) {
+      try {
+        await this.productsLabel().click();
+        break; // Exit the loop if the click was successful
+      } catch (error) {
+        if (await this.addedItemDialog().isVisible()) {
+          await this.continueShoppingButton().click();
+        }
+        attempts++;
+      }
     }
-    await this.productsLabel().click();
-
+    if (attempts >= maxAttempts) {
+      throw new Error(`Failed to click the "Products Label" after ${maxAttempts} attempts.`);
+    }
+    
     // Handle the Google vignette popup
     if (this.page.url().includes("#google_vignette")) {
       await this.page.goBack();

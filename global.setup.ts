@@ -11,7 +11,7 @@ async function globalSetup() {
     const loginPage = new LoginPage(page);
     const homePage = new HomePage(page);
     await loginPage.goto();
-    await loginPage.loginWithValidCredentials(ConfigReader.EMAIL, ConfigReader.PASSWORD);
+    await loginPage.loginToApplication(ConfigReader.EMAIL, ConfigReader.PASSWORD);
     await homePage.assertLogoutLabelIsVisible();
    
     await page.context().storageState({ path: "./loginAuth.json" });

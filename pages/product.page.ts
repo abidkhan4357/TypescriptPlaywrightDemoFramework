@@ -49,6 +49,8 @@ export class ProductPage {
         await this.addToCartButton().waitFor({ state: 'visible', timeout: 30000 });
       });
       await this.addToCartButton().click();
+      await this.addedItemDialog().waitFor({ state: 'visible' });
+      await this.continueShoppingButton().click();
     }
   }
 

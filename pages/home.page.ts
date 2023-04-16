@@ -12,16 +12,15 @@ export class HomePage {
     this.page = page;
   }
 
-  public async clickOnProductsLabel(maxAttempts: number = 3) {
+  public async clickOnProductsLabel(maxAttempts: number = 5) {
     let attempts = 0;
     while (attempts < maxAttempts) {
       try {
         await this.productsLabel().click();
         break; // Exit the loop if the click was successful
       } catch (error) {
-        if (await this.addedItemDialog().isVisible()) {
-          await this.continueShoppingButton().click();
-        }
+        await this.addedItemDialog().waitFor({ state: 'visible' });
+        await this.continueShoppingButton().click();
         attempts++;
       }
     }

@@ -17,11 +17,10 @@ export class HomePage {
     while (attempts < maxAttempts) {
       try {
         await this.productsLabel().click();
-        break; // Exit the loop if the click was successful
+        break; 
       } catch (error) {
-        if (await this.addedItemDialog().isVisible()) {
-          await this.continueShoppingButton().click();
-        }
+        await this.addedItemDialog().waitFor({ state: 'visible' });
+        await this.continueShoppingButton().click();
         attempts++;
       }
     }

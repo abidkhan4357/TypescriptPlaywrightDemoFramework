@@ -1,8 +1,7 @@
 # Playwright TypeScript Demo Framework
 
 ## Overview
-This is a sample project that uses a combination of json file for data driven, builder pattern for running test with random data
-and with page object model/fixtures as a base design. For the demo purpose test cases are created on https://automationexercise.com/ site
+This is a sample project that utilizes playwright build in runner with page object model/fixtures as a base design. For the demo purpose test cases are created on https://automationexercise.com/ site
 
 ## Table of Contents
 
@@ -11,8 +10,17 @@ and with page object model/fixtures as a base design. For the demo purpose test 
   - [Prerequisites](#prerequisites)
   - [Execution in local](#execution-in-local)
   - [Execution in Docker](#execution-in-docker)
+- [Coming Soon](#coming-soon)
+- [GitHub Actions](#github-actions)
+- [Contributing](#contributing)
 
 ## Features
+- Test data usage of json file for data driven, builder pattern with faker library and custom data factory templates
+- Attach video and screen shot on failure to build in playwright html report
+- Playwright storage state and usage of global setup for one time login
+- Environment json file to run test easily in QA or Dev environments (Note: This is an example as we do not have a Dev env)
+- Usage of fixtures for cleaner page object model
+- Supports serial and Parallel execution
 
 ## Getting Started
 
@@ -65,3 +73,21 @@ and with page object model/fixtures as a base design. For the demo purpose test 
 ```
 docker run <imagename>
 ```
+## Coming Soon
+- Utility to test REST APIs
+- Supporting all playwright browsers(To be able to set easily as command)
+- Improve of execution using ENV(cross-env) instead of json file
+- Usage of alias for cleaner imports
+- Set up CI/D tool Jenkins
+- Selenium grid support
+- SonarQube integration
+
+## Github Actions
+- The github action workflow file is located in directory .github/workflows file name _playwright.yml_
+- The workflow is triggered on every push to master branch or when a pull request is created 
+- The workflow consist of two jobs: test and build-and-push. The _test_ job executes the test and _build-and-push_
+builds the Docker images and pushes it to Docker hub
+
+## Contributing
+I am open to contributions from the community to this Playwright project! Whether you're interested in adding new features, fixing bugs, or improving documentation, I would love to have your contributions and collaborate with you to make this project better. Please note if you're changes 
+are big, raise a issue to discuss the changes first.

@@ -41,10 +41,24 @@ jobs:
 
   api-tests:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        browser: [chromium]
+    container:
+      image: mcr.microsoft.com/playwright:v1.32.1-focal    
+      options: --shm-size=2gb
     steps:
       - uses: actions/checkout@v2
 
-      - name: Install dependencies
+      - name: Cache Playwright dependencies
+        uses: actions/cache@v2
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+
+      - name: Install Playwright dependencies
         run: npm ci
 
       - name: Run API tests

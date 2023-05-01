@@ -13,7 +13,7 @@ jobs:
       matrix:
         browser: [chromium]
     container:
-      image: mcr.microsoft.com/playwright:latest
+      image: mcr.microsoft.com/playwright:v1.32.1-focal    
       options: --shm-size=2gb
     steps:
       - uses: actions/checkout@v2
@@ -48,7 +48,7 @@ jobs:
         run: npm ci
 
       - name: Run API tests
-        run: npm run test-api
+        run: npm run test:api
 
   build-and-push:
     runs-on: ubuntu-latest

@@ -74,7 +74,7 @@ This is a sample project that utilizes playwright build in runner with page obje
 docker run <imagename>
 ```
 ## Coming Soon
-- Utility to test REST APIs
+~~- Add tests for REST APIs
 - Supporting all playwright browsers(To be able to set easily as command)
 - Improve of execution using ENV(cross-env) instead of json file
 - Usage of alias for cleaner imports
@@ -85,8 +85,7 @@ docker run <imagename>
 ## Github Actions
 - The github action workflow file is located in directory .github/workflows file name _playwright.yml_
 - The workflow is triggered on every push to master branch or when a pull request is created 
-- The workflow consist of two jobs: test and build-and-push. The _test_ job executes the test and _build-and-push_
-builds the Docker images and pushes it to Docker hub
+- The workflow consist of two jobs: ui-test and api-test.
 
 ## Contributing
 I am open to contributions from the community to this Playwright project! Whether you're interested in adding new features, fixing bugs, or improving documentation, I would love to have your contributions and collaborate with you to make this project better. Please note if you're changes 

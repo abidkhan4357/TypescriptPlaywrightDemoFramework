@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "npx playwright test"
+    "test:api": "npx playwright test --config=playwright.config.ts --grep=api-tests",
+    "test:ui": "npx playwright test --config=playwright.config.ts --grep=ui-tests"
   },
   "keywords": [],
   "author": "",

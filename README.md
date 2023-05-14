@@ -21,6 +21,7 @@ This is a sample project that utilizes playwright build in runner with page obje
 - Environment json file to run test easily in QA or Dev environments (Note: This is an example as we do not have a Dev env)
 - Usage of fixtures for cleaner page object model
 - Supports serial and Parallel execution
+- Easily add more test for testing restful apis
 
 ## Getting Started
 
@@ -74,7 +75,6 @@ This is a sample project that utilizes playwright build in runner with page obje
 docker run <imagename>
 ```
 ## Coming Soon
-~~- Add tests for REST APIs
 - Supporting all playwright browsers(To be able to set easily as command)
 - Improve of execution using ENV(cross-env) instead of json file
 - Usage of alias for cleaner imports

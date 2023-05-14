@@ -1,6 +1,6 @@
 import { test } from '../fixtures/base.page'
 import { ConfigReader } from "../config-reader/config.reader";
-import { LoginTemplate } from '../dataFactory/templates/loginTemplate';
+import { LoginTemplate } from '../data-factory/templates/loginTemplate';
 
 test.beforeEach(async ({ loginPage, context }) => {
     context.clearCookies();

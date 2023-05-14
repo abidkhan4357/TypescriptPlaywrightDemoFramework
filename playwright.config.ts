@@ -22,7 +22,7 @@ export default defineConfig({
    /* Reporter to use. See https://playwright.dev/docs/test-reporters */
    reporter: 'html',
    /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */ 
-   
+
   projects: [
     {
       name: 'UI tests',
@@ -37,16 +37,11 @@ export default defineConfig({
       viewport: { width: 1920, height: 1080 }
       },
     },
-
     {
         name: 'API tests',
         testDir: 'api-tests',
         use: {
-          baseURL: 'https://automationexercise.com/api/',
-          // extraHTTPHeaders: {
-          //    'Accept-Encoding':'gzip, deflate, br',
-          //    'Connection': 'keep-alive',
-          // }
+          baseURL: 'https://automationexercise.com/api/'
         },
     },
   ],

@@ -1,16 +1,19 @@
 import { expect, test } from "@playwright/test";
 import { ConfigReader } from "../config-reader/config.reader";
+import { LoginRequestBody } from "../api-request-models/LoginRequestBody";
+
+const loginRequestBody = new LoginRequestBody(ConfigReader.EMAIL, ConfigReader.PASSWORD);
 
 test.describe("API login tests", () => {
 
+  /*This test shows post request with valid details using request model. This approach can be helpful in when
+  request body is complex.*/
   test("Post: Verify login with valid details", async ({ request }) => {
     const response = await request.post("verifyLogin", {
-      form: {
-        email: ConfigReader.EMAIL,
-        password: ConfigReader.PASSWORD,
-      },
+      form: loginRequestBody.validModel(),
     });
     const responseBody = await response.json();
+    console.log(responseBody);
     expect(responseBody.message).toBe("User exists!");
 });
 

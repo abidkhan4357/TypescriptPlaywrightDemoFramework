@@ -44,18 +44,40 @@ This is a sample project that utilizes playwright build in runner with page obje
     ```
     npx playwright install
     ```
- 3. In root project directory to execute below command to run all test
+ 3. In root project directory to execute below command to run all UI and API testS
     ```
     npx playwright test
     ```
+    * If you need to run api or ui tests only 
+    
+     API:
+     ```
+     npm run test:api
+     ```  
+     UI:
+     ```
+     npm run test:ui
+     ```
+     * If you want to run on a specific firefox or webkit you can run the following command. By default project will run on chromium
+     
+     Firefox:
+     ```
+     BROWSER=firefox npm run test:ui
+     ```
+     Webkit:
+     ```
+     BROWSER=webkit npm run test:ui
+     ```
+     
       **Note**: By default tests will run in headless and in parallel. 
-        If you would like to run in headed mode use __--headed__ flag and/or if you like to disable parallelism use __--workers=1__
+        If you would like to run in UI tests headed mode use __--headed__ flag and/or if you like to disable parallelism use __--workers=1__
         eg:
         ```
         npm playwright test --headed --workers=1
         ```
-
-**Optional:** If you would like to execute tests using IDE and playwright runner. Open VS code and download the extension: **Playwright Test for VS Code** 
+        
+**Optional:** If you would like to execute tests using IDE and playwright runner. Open VS code and download the extension: **Playwright Test for VS Code**. 
+You can also enable the NPM SCRIPTS in the the VS Code explorer and can run them like that
 
 
 ### Execution in Docker

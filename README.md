@@ -97,7 +97,6 @@ You can also enable the NPM SCRIPTS in the the VS Code explorer and can run them
 docker run <imagename>
 ```
 ## Coming Soon
-- Supporting all playwright browsers(To be able to set easily as command)
 - Improve of execution using ENV(cross-env) instead of json file
 - Usage of alias for cleaner imports
 - Set up CI/D tool Jenkins
